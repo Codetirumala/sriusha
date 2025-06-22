@@ -410,7 +410,7 @@ const Home = () => {
          <div className="testimonial-content">
             <h2>What Our Clients Say</h2>
             <p className="testimonial-quote">
-              “{testimonialsData[currentTestimonial].quote}”
+              "{testimonialsData[currentTestimonial].quote}"
             </p>
             <div className="testimonial-author">
               {testimonialsData[currentTestimonial].author}
@@ -426,33 +426,80 @@ const Home = () => {
         </button>
       </section>
 
+      {/* Latest Blogs Section */}
+      <section className="latest-blogs-section">
+        <div className="latest-blogs-container">
+          <p className="latest-blogs-subtitle">OUR LATEST BLOGS</p>
+          <h2 className="latest-blogs-title">
+            Empowering Brands With<br />
+            Digital <span className="highlight-underline">Brilliance
+              <img src={require('../images/text-shep-1.png')} alt="underline" className="underline-img" />
+            </span>
+          </h2>
+          <div className="blogs-grid">
+            {/* Left large blog card */}
+            <div className="blog-card blog-card-large vertical-layout">
+              <img src={require('../images/post-1.webp')} alt="Blog 1" className="blog-image" />
+              <div className="blog-info">
+                <div className="blog-meta">
+                  <span className="blog-category">Business</span>
+                  <span className="blog-date">22 june 2025</span>
+                </div>
+                <h3 className="blog-title">How to Prepare for your First Track his consumer-focused</h3>
+                <a href="#" className="blog-read-more">Read More</a>
+              </div>
+            </div>
+            {/* Right small blog cards */}
+            <div className="blog-card-group">
+              <div className="blog-card">
+                <img src={require('../images/post-2.webp')} alt="Blog 2" className="blog-image" />
+                <div className="blog-info">
+                  <div className="blog-meta">
+                    <span className="blog-category">Business</span>
+                    <span className="blog-date">22 june 2025</span>
+                  </div>
+                  <h3 className="blog-title">Stay Ahead in the Digital Side Pocket</h3>
+                  <a href="#" className="blog-read-more">Read More</a>
+                </div>
+              </div>
+              <div className="blog-card">
+                <img src={require('../images/post-3.webp')} alt="Blog 3" className="blog-image" />
+                <div className="blog-info">
+                  <div className="blog-meta">
+                    <span className="blog-category">Business</span>
+                    <span className="blog-date">22 june 2025</span>
+                  </div>
+                  <h3 className="blog-title">Our Futuristic Marketing Realtor Should Read</h3>
+                  <a href="#" className="blog-read-more">Read More</a>
+                </div>
+              </div>
+              <div className="blog-card">
+                <img src={require('../images/post-4.webp')} alt="Blog 4" className="blog-image" />
+                <div className="blog-info">
+                  <div className="blog-meta">
+                    <span className="blog-category">Business</span>
+                    <span className="blog-date">02 Apr 2024</span>
+                  </div>
+                  <h3 className="blog-title">Grow your appraisal skills and real estate career?</h3>
+                  <a href="#" className="blog-read-more">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Stats Section */}
  
 
       {/* CTA Section */}
-      <section className="cta-section">
-        <div className="container">
-          <motion.div 
-            className="cta-content"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2>Ready to Transform Your Business?</h2>
-            <p>Let's discuss how we can help you achieve your digital goals</p>
-            <Link to="/contact" className="btn btn-primary">
-              Start Your Journey
-              <FaArrowRight />
-            </Link>
-          </motion.div>
-        </div>
-      </section>
+      
 
       {/* Scroll to top button */}
       <motion.button
-        className="scroll-to-top"
+        className={`scroll-to-top-btn${showScroll ? ' show' : ''}`}
         onClick={scrollTop}
+        aria-label="Scroll to top"
         initial={{ scale: 0 }}
         animate={{ scale: showScroll ? 1 : 0 }}
         transition={{ duration: 0.3 }}

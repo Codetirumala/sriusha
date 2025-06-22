@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaBars, FaTimes, FaConnectdevelop } from 'react-icons/fa';
 import './Navbar.css';
+import logo1 from '../images/logo-1.svg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,8 +39,7 @@ const Navbar = () => {
           whileTap={{ scale: 0.95 }}
         >
           <Link to="/">
-            <FaConnectdevelop className="logo-icon" />
-            <span>Dynamic</span>
+            <img src={logo1} alt="Logo" className="nav-logo-img" />
           </Link>
         </motion.div>
 
