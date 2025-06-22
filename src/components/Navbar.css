@@ -1,0 +1,146 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: transparent;
+  transition: all 0.3s ease;
+  padding: 1rem 0;
+}
+
+.navbar.scrolled {
+  background: #1a1a1a;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.nav-logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  gap: 0.75rem;
+}
+
+.logo-icon {
+  font-size: 2.5rem;
+  color: #DFFF00; /* Bright yellow-green */
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #d1d5db;
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #DFFF00;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+.btn-cta {
+  background: #DFFF00;
+  color: #1a1a1a;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(223, 255, 0, 0.2);
+}
+
+.nav-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  background: #1a1a1a;
+  padding: 1rem 2rem 2rem;
+}
+
+.mobile-nav-link {
+  display: block;
+  text-decoration: none;
+  color: #d1d5db;
+  font-weight: 500;
+  padding: 1rem 0;
+  border-bottom: 1px solid #374151;
+  transition: all 0.3s ease;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+  color: #DFFF00;
+}
+
+.mobile-cta {
+  display: block;
+  text-align: center;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .nav-menu, .nav-actions {
+    display: none;
+  }
+  
+  .nav-toggle {
+    display: block;
+  }
+  
+  .mobile-menu {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-logo a {
+    font-size: 1.2rem;
+  }
+  
+  .logo-icon {
+    font-size: 1.5rem;
+  }
+  
+  .nav-container {
+    height: 70px;
+  }
+} 
